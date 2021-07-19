@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(padded.jpg)
+}
+
+.calculate,
+.result {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.result {
+    display: none;
+}
+
+.calculate .title,
+.result .title {
+    background: -webkit-linear-gradient(45deg, #000099, #0000FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 6.5vmin;
+}
+
+.calculate .gender {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+}
+
+.calculate .gender div {
+    height: 32vmin;
+    width: 32vmin;
+    background: #232323;
+    box-shadow: 0 .5vmin 1vmin .6vmin #292929;
+    text-align: center;
+    line-height: 32vmin;
+    font-size: 20vmin;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+.calculate .gender div span {
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.calculate .gender div.male.active span {
+    background: -webkit-linear-gradient(45deg, #4DC3FF, #1919FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.calculate .gender div.female.active span {
+    background: -webkit-linear-gradient(45deg, #FF2A00, #FFAA00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.calculate .height,
+.calculate .weight {
+    margin-top: 4vmin;
+    width: 75%;
+    height: 32vmin;
+    background: #232323;
+    box-shadow: 0 .5vmin 1vmin .6vmin #292929;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 5vmin;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #555;
+    cursor: pointer;
+}
+
+.calculate .height .val,
+.calculate .weight .val {
+    color: #fff;
+    font-size: 5vmin;
+    font-weight: normal;
+    margin: 0;
+    margin-top: -2vmin;
+}
+
+.calculate .height .val i,
+.calculate .weight .val i {
+    text-align: center;
+    line-height: 6vmin;
+    font-size: 5vmin;
+    font-weight: bold;
+    padding: 3vmin;
+}
+
+.calculate .height .val span,
+.calculate .weight .val span {
+    font-size: 6vmin;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.calculate .height input,
+.calculate .weight input {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 3vmin;
+    margin-top: 3vmin;
+    background: #333;
+    border-radius: 50vmin;
+    overflow: hidden;
+}
+
+.calculate .height input::-webkit-slider-thumb,
+.calculate .weight input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 3vmin;
+    width: 3vmin;
+    background: linear-gradient(45deg, #ff7400, #F4511E);
+    box-shadow: -50vmin 0 0 50vmin #F4511E;
+    cursor: pointer;
+}
+
+.calculate .calc,
+.result .recalc {
+    height: 14vmin;
+    width: 75%;
+    line-height: 14vmin;
+    color: #fff;
+    font-size: 5vmin;
+    font-weight: bold;
+    font-family: sans-serif;
+    background: #232323;
+    box-shadow: 0 0 1vmin 1vmin #3333;
+    text-align: center;
+    margin-top: 4vmin;
+    cursor: pointer;
+}
+
+.result .recalc {
+    margin-top: 20vmin;
+}
+
+.calculate .calc:hover,
+.result .recalc:hover {
+    color: #33FFFF;
+    cursor: pointer;
+}
+
+.result .bmi {
+    height: 40vmin;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #232323;
+    box-shadow: 0 1vmin 1vmin .6vmin #292929;
+    margin-top: 5vmin;
+}
+
+.result .bmi p.title {
+    background: #555;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+}
+
+.result .bmi .val {
+    font-size: 7vmin;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.result .text {
+    font-size: 5vmin;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #fff;
+    width: 75%;
+    text-align: center;
+    margin-top: 20vmin;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 5vmin;
+    margin-top: 10vmin;
+    background: #f00;
+    width: 75%;
+    text-align: center;
+    padding-top: 4vmin;
+    padding-bottom: 2vmin;
+    animation: link .6s alternate infinite;
+}
+
+@keyframes link {
+    100% {
+        transform: scaleX(1.2);
+    }
+}
